@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const dMapper = {
-  'images': ['png', 'jpg', 'jpeg'],
+  'images': ['png', 'jpg', 'jpeg', 'heic'],
   'audios': ['mp3', 'flac'],
   'videos': ['mkv', 'avi', 'mp4'],
   'documents': ['pdf', 'doc', 'docx', 'epub', 'mobi'],
@@ -22,7 +22,7 @@ module.exports = (dir) => {
       // Getting each extension array
       const typeArr = dMapper[type];
       // If our current file extension is a part of current directory type, will move the file into that folder
-      if(typeArr.indexOf(ext) > -1) {
+      if(typeArr.indexOf(ext.toLowerCase()) > -1) {
         // If organized folder is not available, create one
         if (!fs.existsSync(`${dir}/${type}`)){
             fs.mkdirSync(`${dir}/${type}`);
