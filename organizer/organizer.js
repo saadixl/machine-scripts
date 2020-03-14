@@ -6,7 +6,7 @@ const dMapper = {
   'videos': ['mkv', 'avi', 'mp4'],
   'documents': ['pdf', 'doc', 'docx', 'epub', 'mobi'],
   'softwares': ['dmg', 'pkg'],
-  'code': ['js', 'json'],
+  'code': ['js', 'json', 'py'],
   'torrents': ['torrent'],
   'compressed': ['zip'],
 };
